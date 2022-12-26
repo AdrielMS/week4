@@ -1,0 +1,69 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="global.css" />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <navbar class="container navbar flex-center">
+      <form class="form">
+        <input name="email" type="email" placeholder="email" />
+        <input name="password" type="password" placeholder="password" />
+        <input name="phone" type="phone" placeholder="phone" />
+        <button type="submit">Submit</button>
+      </form>
+    </navbar>
+    <!-- <form class="form">
+      <input name="email" type="email" placeholder="email" />
+      <input name="password" type="password" placeholder="password" />
+      <input name="phone" type="phone" placeholder="phone" />
+      <button type="submit">Submit</button>
+    </form> -->
+
+    <div id="feeds"></div>
+    <script>
+      //input data
+      const inputForm = document.querySelector(".form");
+
+      inputForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(inputForm);
+        const data = new URLSearchParams(formData);
+
+        fetch("https://63a9301df4962215b58edc75.mockapi.io/signup", {
+          method: "POST",
+          body: data,
+        })
+          .then((res) => {
+            if (res.status == 201) {
+              location.reload();
+              return res.json();
+            }
+          })
+          .then((data) => console.log(data))
+          .catch((error) => console.log(error));
+      });
+
+      fetcher("GET", "signup").then((data) => {
+        document.getElementById("feeds").innerHTML = data
+          .map(
+            (item) => `
+                <div class='card-feeds m-10'>
+                    <div>${item.id}</div>
+                    <div>${item.email}</div>
+                    <div>${item.password}</div>
+                    <div>${item.phone}</div>
+                    <button onclick='deleteData(${item.id})'>delete</button>
+                </div>
+                `
+          )
+          .join("");
+      });
+    </script>
+  </body>
+</html>

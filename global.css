@@ -1,0 +1,349 @@
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+
+/* Footer */
+.mini-profile{
+    /* padding: 0px 0px 0px 50px; */
+    width: 250px;
+}
+
+.mini-detail h5{
+    margin-top: 0px;
+}
+
+.mini-detail{
+    height: 100%;
+    flex-direction: column;
+    flex: 0.5;
+    padding-left: 30px;
+}
+
+
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.container-block{
+    display: block;
+    flex-direction: row;
+    /* flex: 1; */
+}
+
+.align-center{
+    align-items: center;
+}
+
+.justify-center{
+    justify-items: center;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-around{
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-evenly{
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.flex-between{
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* Background color */
+.bg-default{
+    background-color: #BCBABA;
+}
+
+.bg-white{
+    background-color: #FFFFFF;
+}
+
+.bg-success{
+    background-color: #88B788;
+    
+}
+
+.bg-danger{
+    background-color: #C59378;
+}
+
+.bg-warning{
+    background-color: yellow;
+}
+
+.bg-primary{
+    background-color: #FFBA33 ;
+}
+
+.bg-secondary{
+    background-color: #6A4029;
+}
+
+
+
+/* Button */
+.btn {
+    background: #e6e6e6;
+    color: #333;
+    outline: 0;
+    border: 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #FFBA33;
+    color: #6A4029;
+}
+.btn-secondary {
+    background-color: #6A4029;
+    color: #FFFFFF;
+}
+.btn-block {
+    width: 100%;
+}
+.btn-danger {
+    background-color: red;
+    color: #e6e6e6;
+}
+
+.btn-success {
+    background-color: green;
+    color: #FFFFFF;
+}
+
+.btn-warning {
+    background-color: yellow;
+    color:#FFFFFF;
+}
+.rounded {
+    border-radius: 5px;
+}
+.rounded-xl {
+    border-radius: 15px;
+    
+}
+.rounded-full {
+    border-radius: 100px;
+}
+
+.rounded-most{
+    border-radius: 200px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    flex: 0.2;
+    height: 40px;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+.centernavbar{
+    display: flex;
+    flex: 0.2;
+    height: 40px;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* on hover btn */
+.btn-primary:hover {
+    box-shadow: 0px 6px 20px rgba(255, 186, 51, 0.4);
+}
+.btn-secondary:hover {
+    box-shadow: 0px 6px 20px rgba(106, 64, 41, 0.63);
+}
+
+
+
+/* text */
+.text-center {
+    text-align: center;
+}
+.text-primary {
+    color: #FFBA33;
+}
+
+.text-white{
+    color: #FFFFFF;
+}
+
+.text-secondary {
+    color: #6A4029;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text:hover{
+    text-decoration: underline;
+    ;
+}
+
+
+
+/* margin, height & padding*/
+.mb-0{
+    margin-bottom: 0px;
+}
+
+.mb-50{
+    margin-bottom: 50px;
+}
+
+.mt-20{
+    margin-top: 20px;
+}
+
+.mt-0{
+    margin-top: 0px;
+}
+
+.mt-50{
+    margin-top: 50px;
+}
+
+.mb-5 {
+    margin-bottom: 1rem;
+}
+
+.ml-5{
+    margin-left: 2rem ;
+}
+
+.ml-10{
+    margin-left:3rem;
+}
+
+.p-50 {
+    padding: 50px
+}
+
+.p-0{
+    padding: 0px;
+}
+
+.pt-4r{
+    padding-top: 4rem;
+}
+
+.pl-0{
+    padding-left: 0px;
+}
+
+.pl-10{
+    padding-left: 10px;
+}
+.pr-10{
+    padding-right: 10px;
+}
+
+.pt-10{
+    padding-top: 10px;
+}
+
+.pb-10{
+    padding-bottom: 10px;
+}
+
+
+
+/* form */
+.form-label {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 700;
+    font-weight: bold;
+    color: #4F5665;
+
+}
+.form-input {
+    border: 1px solid #4F5665;
+    color: #9F9F9F;
+    padding: 20px 0.5vw;
+    width: 41vw;
+    display: block;
+}
+
+
+.form-search{
+    border: 1px solid #4F5665;
+    color: #9F9F9F;
+    padding: 7px 2vw;
+    width: 10vw;
+    display: block;
+}
+
+
+
+/* logo */
+.brand {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+.brand h3 {
+    margin-left: 15px
+}
+
+
+
+/* Card */
+.card{
+    /* box-shadow: 0px 0px 3px  #333; */
+    /* background: white; */
+    padding: 10px;
+}
+
+.card-box{
+    width:100%;
+    border: 0px solid;
+}
+
+.card-p0{
+    /* background: white; */
+    padding: 0px;
+}
+
+/* Coloumn */
+.col{
+    float: 1;
+    padding: 20px;
+}
+
+.col-0{
+    float: 1;
+    padding:0;
+}
+
+.col-12{
+    width:100%;
+}
+
+.shadow{
+    box-shadow: 10px 10px 10px #333;
+}
