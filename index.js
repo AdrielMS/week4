@@ -1,4 +1,5 @@
-const fetcher = async (method, ep, body = {}) => {
+// Ini untuk soal nomor 2, 3 dan 4
+const fetcher = async (method, ep) => {
   if (method == "GET") {
     const result = await getData(ep);
     return result;
@@ -7,6 +8,7 @@ const fetcher = async (method, ep, body = {}) => {
   }
 };
 
+//buatGetData
 const getData = (ep) => {
   return new Promise((resolve, reject) => {
     fetch(`https://63a9301df4962215b58edc75.mockapi.io/${ep}`)
@@ -21,6 +23,7 @@ const getData = (ep) => {
   });
 };
 
+//buatDeleteData
 const deleteData = (id) => {
   if (confirm("apakah kamu yakin?")) {
     fetch(`https://63a9301df4962215b58edc75.mockapi.io/signup/${id}`, {
@@ -41,3 +44,8 @@ const deleteData = (id) => {
     alert("oke batal");
   }
 };
+
+//BuatPostData
+// const postData = (ep, method, body) => {
+
+// }

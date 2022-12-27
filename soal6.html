@@ -1,0 +1,35 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="soal6.js"></script>
+    <link rel="stylesheet" href="global.css" />
+  </head>
+  <body>
+    <div id="feeds"></div>
+    <script>
+      fetcher("GET", "users").then((data) => {
+        document.getElementById("feeds").innerHTML = data
+          .map(
+            (item) => `
+                <div class='card-feeds p-20'>
+                    <div>id: ${item.id}</div>
+                    <div>name: ${item.name}</div>
+                    <div>username: ${item.username}</div>
+                    <div>email: ${item.email}</div>
+                    <div>street: ${item.address.street}</div>
+                    <div>suite: ${item.address.suite}</div>
+                    <div>city: ${item.address.city}</div>
+                    <div>zipcode: ${item.address.zipcode}</div>
+                    <div>geo lat: ${item.address.geo.lat}</div>
+                    <div>geo lng: ${item.address.geo.lng}</div>  
+                </div>
+                `
+          )
+          .join("");
+      });
+    </script>
+  </body>
+</html>
