@@ -1,3 +1,4 @@
+// ini untuk soal nomor 5 dan 6
 const fetcher = async (method, ep) => {
   if (method == "GET") {
     const result = await getData(ep);
@@ -19,4 +20,20 @@ const getData = (ep) => {
       .then((data) => resolve(data))
       .catch((err) => reject(err));
   });
+};
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches(".dropbtn")) {
+    let dropdowns = document.getElementsByClassName("dopdown-content");
+    for (let i = 0; i < dropdown.length; i++) {
+      let openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
 };

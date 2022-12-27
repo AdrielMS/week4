@@ -1,3 +1,4 @@
+<!-- Ini untuk soal nomor 5 dan 6 -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,15 +7,24 @@
     <title>Document</title>
     <script src="soal6.js"></script>
     <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="soal6.css" />
   </head>
   <body>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#">link 1</a>
+        <a href="#">link 2</a>
+        <a href="#">link 3</a>
+      </div>
+    </div>
     <div id="feeds"></div>
     <script>
       fetcher("GET", "users").then((data) => {
         document.getElementById("feeds").innerHTML = data
           .map(
             (item) => `
-                <div class='card-feeds p-20'>
+                <div class='p-20'>
                     <div>id: ${item.id}</div>
                     <div>name: ${item.name}</div>
                     <div>username: ${item.username}</div>
