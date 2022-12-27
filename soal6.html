@@ -10,14 +10,20 @@
     <link rel="stylesheet" href="soal6.css" />
   </head>
   <body>
-    <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="#">link 1</a>
-        <a href="#">link 2</a>
-        <a href="#">link 3</a>
+    <navbar class="navbar">
+      <div href="#"><h1>Title</h1></div>
+      <div href="#">Home</div>
+      <div href="#">About</div>
+      <div href="#">History</div>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">link 1</a>
+          <a href="#">link 2</a>
+          <a href="#">link 3</a>
+        </div>
       </div>
-    </div>
+    </navbar>
     <div id="feeds"></div>
     <script>
       fetcher("GET", "users").then((data) => {
