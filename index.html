@@ -31,8 +31,6 @@
       const inputForm = document.querySelector(".form");
 
       inputForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-
         const formData = new FormData(inputForm);
         const data = new URLSearchParams(formData);
 
@@ -50,12 +48,12 @@
           .catch((error) => console.log(error));
       });
 
+      //nampilin data yang di input (manggil function di file JS index)
       fetcher("GET", "signup").then((data) => {
         document.getElementById("feeds").innerHTML = data
           .map(
             (item) => `
                 <div class='card-feeds m-10'>
-                    <div>${item.id}</div>
                     <div>${item.email}</div>
                     <div>${item.password}</div>
                     <div>${item.phone}</div>

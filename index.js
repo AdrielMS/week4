@@ -1,4 +1,5 @@
 // Ini untuk soal nomor 2, 3 dan 4
+//function untuk dipanggil di file html
 const fetcher = async (method, ep) => {
   if (method == "GET") {
     const result = await getData(ep);
@@ -35,8 +36,7 @@ const deleteData = (id) => {
 
         return res.json();
       })
-      .then((data) => {
-        // alert("data berhasil dihapus")
+      .then(() => {
         window.location.reload();
       })
       .catch((err) => console.error(err));
@@ -44,8 +44,3 @@ const deleteData = (id) => {
     alert("oke batal");
   }
 };
-
-//BuatPostData
-// const postData = (ep, method, body) => {
-
-// }
